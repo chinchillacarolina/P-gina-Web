@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="tecnologias.html">Tecnologías</a></li>
+                <li><a href="about.html">Sobre mí</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+        <div class="container">
+            <h1>Mis Habilidades</h1>
+            <div class="slideshow-container">
+                <div class="slides active">
+                    <img src="https://www.nalandaglobal.com/wp-content/uploads/comunicacionefectiva.jpg" alt="Comunicación efectiva" class="skill-image">
+                    <ul>
+                        <li>Comunicación efectiva</li>
+                        <li>Trabajo en equipo</li>
+                        <li>Aprendo muy rápido</li>
+                        <li>Empática y paciente</li>
+                    </ul>
+                </div>
+                <div class="slides">
+                    <img src="https://www.hpsconsultores.com/wp-content/uploads/2014/07/fotolia_61152717_s.jpg" alt="Organización" class="skill-image">
+                    <ul>
+                        <li>Organización</li>
+                        <li>Resolución de problemas</li>
+                        <li>Adaptabilidad</li>
+                        <li>Creatividad</li>
+                    </ul>
+                </div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        let slideIndex = 0;
+
+        function changeSlide(n) {
+            let slides = document.getElementsByClassName("slides");
+            slides[slideIndex].classList.remove("active");
+            slideIndex = (slideIndex + n + slides.length) % slides.length;
+            slides[slideIndex].classList.add("active");
+        }
+    </script>
+</body>
+</html>
+
